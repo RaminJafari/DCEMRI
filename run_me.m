@@ -103,7 +103,7 @@ pbaspect([1 1 1])
 
 subplot(223)
 imagesc(mtt_err)
-title('mean transit time relatvie error(%)')
+title('mean transit time relative error(%)')
 colorbar
 pbaspect([1 1 1])
 
