@@ -3,7 +3,7 @@ clear;
 
 %By setting the input parameters below, the algorithm generates tissue
 %enhancement curve, adds complex noise to dynamic curves, solves for
-%perfusion paramters using whole-field linear least-squares method, and 
+%perfusion parameters using whole-field linear least-squares method, and 
 %generates maps of relative error.  
 
 %Please refer below for more info:
@@ -21,7 +21,7 @@ m = 100; % generate a grid with m by m pixels
 cnr = 1e9; %contrast-to-noise ratio
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-load('inputs.mat') %load experimental arterial and portal venous enahncemnet curves
+load('inputs.mat') %load experimental arterial and portal venous enahancemnet curves
 t_s = 0.2298; %sampling time
 time_sim_thr = (1:size(aif,1))'*t_s; % generates time axis for enhancement curves
 
@@ -37,7 +37,7 @@ aif_mat_thr = repmat(aif,1,m^2);
 pvif_mat_thr = repmat(pvif,1,m^2);
 enhancement_mat_thr = repmat(enhancement_sim_thr,1,m^2);
 %%
-%generate dynamic curves and add comples noise
+%generate dynamic curves and add complex noise
 pre = 500;
 dynamic_mat_thr = enhancement_mat_thr*pre + pre;
 dynamic_aif_mat_thr = aif_mat_thr*pre + pre;
@@ -57,7 +57,7 @@ enhancement_mat_thr_noise(enhancement_mat_thr_noise<0) = 1e-6;
 aif_mat_thr_noise(aif_mat_thr_noise < 0) = 1e-6;
 pvif_mat_thr_noise(pvif_mat_thr_noise < 0) = 1e-6;
 %%
-%calculate perfusion paramters from enhancement curves using whole-field linear least squares fit
+%calculate perfusion parameters from enhancement curves using whole-field linear least squares fit
 enhancement_mat = reshape(enhancement_mat_thr_noise(:),[size(enhancement_mat_thr_noise,1)*size(enhancement_mat_thr_noise,2),size(enhancement_mat_thr_noise,3)]);
 aif_mat = reshape(aif_mat_thr(:),[size(aif_mat_thr_noise,1)*size(aif_mat_thr_noise,2),size(aif_mat_thr_noise,3)]);
 pvif_mat = reshape(pvif_mat_thr_noise(:),[size(pvif_mat_thr_noise,1)*size(pvif_mat_thr_noise,2),size(pvif_mat_thr_noise,3)]);
