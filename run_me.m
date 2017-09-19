@@ -16,8 +16,8 @@ clear;
 %%%%%%%%%%%% Set Input Parameters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 af_thr = 0.9; %arterial fraction
 ecv_thr = 0.8; % extracellular volume
-mtt_thr = 100; %mean transit time
-m = 10; % generate a grid with m by m pixels
+mtt_thr = 10; %mean transit time
+m = 100; % generate a grid with m by m pixels
 cnr = 1e9; %contrast-to-noise ratio
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
