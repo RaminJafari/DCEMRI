@@ -15,9 +15,9 @@ Reson. Med. doi:10.1002/mrm.26888
 Contact: rj259@cornell.edu
 
  Set Input Parameters:
-af_thr = 0.9; %arterial fraction
-ecv_thr = 0.8; % extracellular volume
-mtt_thr = 10; %mean transit time
-m = 100; % generate a grid with m by m pixels
-cnr = 1e9; %contrast-to-noise ratio
+%af_thr = 0.9; %arterial fraction
+%ecv_thr = 0.8; % extracellular volume
+%mtt_thr = 10; %mean transit time
+%m = 100; % generate a grid with m by m pixels
+%cnr = 1e9; %contrast-to-noise ratio
 
